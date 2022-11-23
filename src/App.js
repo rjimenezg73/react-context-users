@@ -7,8 +7,8 @@ import Profile from './components/Profile';
 function App() {
   return (
     <div className="App">
-      <Profile />
       <UserList />
+      <Profile />
     </div>
   );
 }
