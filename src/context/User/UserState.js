@@ -16,13 +16,19 @@ const UserState = (props) => {
   // Ésta función nos va a permitir obtener una lista de usuarios
   const getUsers = async () => {
     const res = await axios.get('https://reqres.in/api/users');
-    console.log(res.data.data);
+    dispatch({
+      type: 'GET_USERS',
+      payload: res.data.data
+    });
   }
 
   // Ésta función nos va a permitir obtener un usuario en espécifico
   const getProfile = async(id) => {
     const res = await axios.get('https://reqres.in/api/users/' + id);
-    console.log(res);
+    dispatch({
+      type: 'GET_PROFILE',
+      payload: res.data.data
+    });
   }
 
 
