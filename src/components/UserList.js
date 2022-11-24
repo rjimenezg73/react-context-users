@@ -4,11 +4,11 @@ import UserContext from '../context/User/UserContext';
 
 const UserList = () => {
 
-  const { getUsers, getProfile } = useContext(UserContext);
+  const { getUsers, users } = useContext(UserContext);
 
   useEffect(() => {
     getUsers();  
-    getProfile(4);
+    console.log(users)
   },[]);
 
   return (
