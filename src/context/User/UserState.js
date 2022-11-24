@@ -3,7 +3,7 @@ import UserReducer from './UserReducer';
 import { UserContext } from './UserContext';
 
 
-const UserState = () => {
+const UserState = (props) => {
 
   const initialState = {
     users: [],
@@ -25,9 +25,14 @@ const UserState = () => {
 
   return(
 
-    <UserContext>
-      
-    </UserContext>
+    <UserContext.Provider value={{
+      users: state.users,
+      selectedUser: state.selectedUser,
+      getUsers: getUsers,
+      getProfile: getProfile
+    }}>
+      {props.children}
+    </UserContext.Provider>
 
   );
 
