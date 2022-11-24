@@ -12,8 +12,16 @@ const UserList = () => {
   },[]);
 
   return (
-    <div>
-      User List Component
+    <div className='list-group h-100'>
+      {
+        users.map(user => (
+          <a className='list-group-item list-group-item-action' href='#!' key={user.id}>
+            <p>
+              {`${user.first_name} ${user.last_name}`}
+            </p>
+          </a>
+        ))
+      }
     </div>
   )
 }

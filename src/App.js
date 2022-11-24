@@ -7,6 +7,8 @@ import Profile from './components/Profile';
 // Importando context
 import UserState from './context/User/UserState';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
     <UserState>
